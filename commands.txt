@@ -1,0 +1,42 @@
+NPM
+====================================
+
+Install NPM Packages
+------------------------------------
+
+*) Install express - npm i express
+*) Install body parser - npm i body-parser
+*) Install mongoose - npm i mongoose
+*) Install nodemon globally - npm i -g nodemon
+*) Install dotenv package - npm i dotenv
+
+
+MongoDB
+====================================
+
+Login to DB with username and password
+------------------------------------
+mongo <db_name> -u <username> -p <password>
+password - can also be specified in next command line.
+
+Create DB user
+------------------------------------
+1) Go to DB
+2) Then create user
+db.createUser({
+    user: "shoppingCart",
+	pwd: "shoppingCart",
+	roles:[{role: "userAdmin" , db:"shoppingCart"}]
+});
+
+Get DB Users
+------------------------------------
+1) Go to DB
+2) then getUsers
+db.getUsers();
+
+Drop DB Users
+------------------------------------
+1) Go to DB
+2) the dropUser
+db.dropUser(<username>);

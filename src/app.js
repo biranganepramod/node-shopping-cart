@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const router = require('./router/userRouter');
 
-app.get("/", (req, res) => {
-    res.send(`request received for local.shoppingcart.com:80`);
-});
-
+app.use(bodyParser.json());
+app.use('/api/v1', router);
 module.exports = app;
 

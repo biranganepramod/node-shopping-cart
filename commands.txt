@@ -40,3 +40,10 @@ Drop DB Users
 1) Go to DB
 2) the dropUser
 db.dropUser(<username>);
+
+Rename database
+------------------------------------
+use oldDatabase;
+db.copyDatabase('<oldDatabase>', '<newDatabase>', '<hostName>');
+db.dropDatabase();
+use newDatabase;
